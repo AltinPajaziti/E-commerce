@@ -1,0 +1,25 @@
+@media (max-width: 540px) {
+  .containerInner{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .containerOuter{
+    display: flex;
+    flex-direction: column;
+    clip-path: polygon(47% 0, 100% 0, 100% 45%, 81% 36%, 68% 40%, 58% 43%, 27% 38%, 0 43%, 0 23%, 0 0);
+  }
+
+  .containerOuter.switch{
+    clip-path: polygon(53% 42%, 76% 54%, 100% 41%, 100% 85%, 100% 100%, 50% 100%, 18% 100%, 0 100%, 0 40%, 25% 49%);
+  }
+
+  .regjistrimiMesazh{
+    margin-top: 20vh;
+  }
+
+  .btn{
+    display: none;
+  }
+}

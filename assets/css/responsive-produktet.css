@@ -1,0 +1,21 @@
+@media screen and (max-width:540px),(max-width:1024px){
+  .produktetKonfig{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .produktetKonfig #KerkoProduktin{
+    width: 50%;
+  }
+
+  .kategorite{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kategorite label{
+    width: 90%;
+  }
+}
+

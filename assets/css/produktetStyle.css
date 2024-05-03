@@ -1,0 +1,570 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap');
+
+body{
+  background-image: url("../images/bgimage.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+*{
+  font-family: DM Sans;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+.kategorite{
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 5vw;
+  gap: 2vw;
+}
+
+.produktetKonfig{
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
+
+.produktetKonfig label{
+  position: relative;
+  width: fit-content;
+  height: 25px;
+  margin: 20px 0px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+.produktetKonfig label.active{
+  background-color: #297483;
+  color: white;
+  transition: .3s ease;
+  box-shadow: 0px 0px 3px gray;
+}
+
+.KonfigCmimi{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+}
+
+.price{
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 2px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price p {
+  padding-right: 5px;
+}
+
+.price input {
+  padding: 5px;
+  background: none;
+  border: 0;
+  border-left: 1px solid gray;
+}
+
+.price input:focus{
+  outline: none;
+}
+
+.price input::-webkit-outer-spin-button,
+.price input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="checkbox"]{
+  width: auto;
+  height: auto;
+  position: absolute;
+  visibility: hidden;
+  z-index: -1;
+  margin: 10px;
+}
+
+input[type="submit"]{
+  padding: 10px 15px;
+  background-color: #296e7b;
+  color: white;
+  box-shadow: 0px 0px 2px black;
+  border: 0;
+  cursor: pointer;
+}
+
+.products{
+  display: grid;
+  width: 90vw;
+  margin: auto;
+  grid-template-columns: 200px 200px 200px 200px;
+  margin-bottom: 30px;
+  gap: 8vw;
+}
+
+.bestSeller{
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgb(205, 205, 205);
+  margin-top: 2vh;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.bestSeller img {
+  object-fit: cover;
+  width: 150px;
+  align-self: center;
+}
+
+.bestSeller .wrapper {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bestSeller h2 {
+  color: rgb(192, 192, 192);
+  text-align: center;
+  height: 50px;
+}
+
+
+.bestSeller .productInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 0px 0px 1px gray;
+  margin: 0 !important;
+}
+
+.bestSeller .productInfo button {
+  align-self: flex-end;
+  border-radius: 10px;
+  outline: none;
+  border: 0;
+  font-weight: bold;
+  transition: .2s ease;
+  padding: 10px 25px;
+  margin: 20px 0px;
+}
+
+.bestSeller .productInfo button:hover {
+  scale: 1.1;
+  transition: .2s ease;
+}
+
+.productInfo button a {
+  color: black;
+  text-decoration: none;
+}
+
+.MainHeading{
+  margin: -20px;
+}
+
+#KerkoProduktin{
+  padding: 10px 20px;
+  width: 150px;
+  border:0;
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px gray;
+  transition: box-shadow .2s ease;
+}
+
+#KerkoProduktin:focus{
+  outline: none;
+  box-shadow: 0px 0px 2px gray;
+  transition: box-shadow .2s ease;
+}
+
+
+#goUp{
+  position: fixed;
+  bottom: 30px;
+  right: -300px;
+  border-radius: 50%;
+  padding: 20px 25px;
+  background-color: #2e7d8d;
+  color: white;
+  font-size: 25px;
+  outline: none;
+  border: 0;
+  transition: right .3s ease;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px gray;
+  z-index: 2;
+}
+
+#goUp.active{
+  right: 15px;
+  transition: right .3s ease;
+}
+
+#goUp:hover + #goUpMessage{
+  right: 100px;
+  transition: right .5s ease;
+}
+
+#goUpMessage{
+  position: fixed;
+  bottom: 50px;
+  color: rgb(48, 48, 48);
+  right: -300px;
+  text-shadow: 0px 0px 2px gray;
+  transition: right .5s ease;
+  font: 20px;
+  z-index: 1;
+}
+
+
+
+
+
+
+nav {
+  width: 100vw;
+  padding: 10px 0px;
+  background: #1c4b54bd;
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 10px;
+}
+
+nav ul li {
+  padding: 10px 15px;
+  position: relative;
+  transition: .2s ease;
+}
+
+nav ul li a::after,
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  transition: .2s ease;
+}
+
+nav ul li a::after {
+  bottom: 0;
+  left: 0;
+  transition: .2s ease;
+}
+
+nav ul li a::before {
+  top: 0;
+  right: 0;
+  transition: .2s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a:hover::before {
+  width: 15px;
+  height: 15px;
+  transition: .2s ease;
+}
+
+nav ul li a:hover::after {
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  /* border-radius: 0px 4px 0px 4px; */
+}
+
+nav ul li a:hover::before {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  /* border-radius: 0px 4px 0px 4px; */
+}
+
+nav ul li a:hover,
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a i {
+  margin: 0px 5px;
+}
+
+nav ul li:last-child {
+  margin-right: 5vw;
+}
+
+nav span{
+  position: absolute;
+  background-color: #1c4b54bd;
+  right: 0px;
+  bottom: 1px;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px black;
+  width: 20px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+nav button{
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 25px;
+  display: none;
+}
+
+
+footer {
+  width: 100vw;
+  min-height: 300px;
+  background-image: url("../images/globewp.jpg");
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footerBox {
+  padding: 30px;
+  width: 350px;
+  display: flex;
+  height: auto;
+  gap: 50px;
+  flex-direction: column;
+}
+
+.footerBox:nth-child(2) {
+  gap: 70px;
+}
+
+.footerBox .socials {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerBox .social {
+  width: 85%;
+  color: white;
+  transition: .2s ease;
+}
+
+.footerBox h3 {
+  font-size: 25px;
+}
+
+.footerBox .social a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color .2s ease;
+  transition: transform .2s ease;
+  font-size: 20px;
+}
+
+.footerBox .social:hover a {
+  color: white;
+  transition: color .2s ease;
+  transition: transform .2s ease;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.footerBox .social i {
+  font-size: 20px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footerBox ul {
+  list-style: none;
+
+}
+
+.footerBox ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  transition: color .2s ease;
+}
+
+.footerBox ul {
+  gap: 30px;
+}
+
+.footerBox ul li {
+  margin: 25px 0px;
+}
+
+.footerBox ul li i {
+  margin-right: 10px;
+}
+
+.footerBox ul li a:hover {
+  color: white;
+  transition: color .2s ease;
+}
+
+.copyright {
+  width: 100vw;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.copyright h4 {
+  padding: 30px;
+}
+
+footer {
+  width: 100vw;
+  min-height: 300px;
+  background-image: url("../images/globewp.jpg");
+  color: white;
+  display: grid;
+  grid-template-columns: 30% 30% 30% ;
+  grid-template-areas: 
+    ".footerBox" ".footerBox" ".footerBox"
+    ".fun" ".fun" ".fun" ".fun" ".fun"
+  ;
+  justify-content: space-around;
+  
+}
+
+.footerBox {
+  padding: 30px;
+  width: 350px;
+  display: flex;
+  height: auto;
+  gap: 30px;
+  flex-direction: column;
+  margin-left: 5vw;
+}
+
+.footerBox:nth-child(2) {
+  gap: 70px;
+}
+
+.footerBox .socials {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerBox .social {
+  width: 85%;
+  color: white;
+  transition: .2s ease;
+}
+
+.footerBox h3 {
+  font-size: 25px;
+}
+
+.footerBox .social a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color .2s ease;
+  transition: transform .2s ease;
+  font-size: 20px;
+}
+
+.footerBox .social:hover a {
+  color: white;
+  transition: color .2s ease;
+  transition: transform .2s ease;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.footerBox .social i {
+  font-size: 20px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footerBox ul {
+  list-style: none;
+
+}
+
+.footerBox ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  transition: color .2s ease;
+}
+
+.footerBox ul {
+  gap: 30px;
+}
+
+.footerBox ul li {
+  margin: 25px 0px;
+}
+
+.footerBox ul li i {
+  margin-right: 10px;
+}
+
+.footerBox ul li a:hover {
+  color: white;
+  transition: color .2s ease;
+}
+
+.fun{
+  width: 80%;
+  margin: auto;
+  height: auto;
+  overflow:visible;
+  margin: 20px 0px;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-left: 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fun i {
+  font-size: 2rem;
+}
+
+.line{
+  width: 90%;
+  height: 1px;
+  border-bottom: 3px dashed gray;
+}

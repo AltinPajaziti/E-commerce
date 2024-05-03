@@ -1,0 +1,40 @@
+@media (max-width: 540px){
+  .container.mt-5{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkout{
+    width: 90%;
+  }
+
+  td{
+    display: flex;
+    flex-direction: column;
+    transform: translateX(10vw);
+  }
+}
+
+@media (max-width:840px){
+  .container.mt-5{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table{
+    width: 100%;
+  }
+
+  #fotoProdukt{
+    width: fit-content;
+  }
+
+  table td{
+    width: 100%;
+  }
+
+  .checkout{
+    text-align: center;
+    width: 100%;
+  }
+}

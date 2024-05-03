@@ -1,0 +1,43 @@
+@media screen and (max-width:600px), (max-width:500px)  {
+  .container{
+    transform: translateY(-15vh);
+  }
+
+  .innerContainer{
+    bottom: -70%;
+    left: 0;
+    width: 393px;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .container{
+    transform: translateY(-15vh);
+  }
+
+  .innerContainer{
+    bottom: -50%;
+    left: 0;
+    width: 393px;
+  }
+}
+
+
+@media screen and (max-width: 400px){
+  .container{
+    transform: translateY(-20vh);
+    padding: 0px;
+  }
+
+  .innerContainer{
+    transform: translateY(2vh);
+  }
+  
+  form{
+    flex-basis: 40%;
+  }
+
+  button{
+    display: none;
+  }
+}

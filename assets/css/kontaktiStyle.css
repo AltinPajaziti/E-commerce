@@ -1,0 +1,156 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../images/test.jpg");
+}
+
+body::before{
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background: linear-gradient(90deg, rgba(33, 83, 94, 0.3) 0%, rgba(31, 106, 121, 0.3) 50%, rgba(29, 142, 165, 0.3) 100%);
+}
+
+.container{
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px gray;
+  transform: translateX(-5vw);
+  position:  relative;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  justify-content: center;
+  margin: 50px;
+  gap: 15px;
+}
+
+.form-control{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control input{
+  background: transparent;
+  border-bottom: 2px solid gray !important;
+  border: 0;
+  position: relative;
+  outline: none;
+  padding: 10px 0px;
+}
+
+.form-control input:focus,
+.form-control input:valid{
+  outline: none;
+}
+
+.form-control label{
+  position: absolute;
+  padding: 5px 0px;
+  transition: .3s ease;
+  color: black;
+  font-size: 15px;
+}
+
+.form-control label span{
+  display: inline-block;
+  min-width: 5px;
+  transition: 0.3s ease-in;
+  color: black;
+}
+
+.form-control input:focus + label span,
+.form-control input:not(:placeholder-shown) + label span{
+  translate: 0px -20px;
+  color: black !important;
+  font-weight: bold;
+  transition: .3s ease;
+}
+
+.form-control input:focus{
+  border-color: black !important;
+}
+
+input[type=submit]{
+  padding: 10px;
+  background-image: linear-gradient(to left bottom,  #20525C, #1abfdf);
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px gray;
+  transition: .2s ease;
+  align-self: start;
+}
+
+input[type=submit]:active{
+  scale: .98;
+  transition: .2s ease;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+  appearance: none;
+}
+
+.form{
+  display: flex;
+  gap: 10px ;
+}
+
+textarea{
+  height: 70px;
+  background-color: transparent;
+  resize: none;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid gray;
+}
+
+.innerContainer{
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  padding: 20px;
+  position: absolute;
+  right: -75%;
+  bottom: 50px;
+  background-color: #20525C;
+  border-radius: 2px;
+  color: white;
+}
+
+.innerContainer i {
+  color: orange;
+}
+
+.innerContainer h6{
+  color: #1abfdf;
+}
+
+button{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 10px 20px;
+  background-color: #20525C;
+  color: white;
+  border-radius: 50%;
+  border: 0;
+  font-size: 25px;
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+button:active{
+  scale: .95;
+  transition: .3s ease;
+}

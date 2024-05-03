@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+nav {
+  position: inherit;
+  background-color: #1c4b54bd;
+  box-shadow: none !important;
+
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  transform: translateY(60px);
+
+}
+
+.productInfo:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productInfo:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.productInfo {
+  flex-basis: 50%;
+  height: 100%;
+}
+
+.productInfo img {
+  width: 50%;
+  align-self: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.llojiProduktit {
+  width: 70%;
+}
+
+.llojiProduktit p {
+  line-height: 1.5;
+}
+
+.blejProduktin {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.blejProduktin span {
+  font-size: 40px;
+  color: rgb(33, 83, 94);
+  font-weight: 800;
+}
+
+.blejProduktin button {
+  background: transparent;
+  border: 0;
+}
+
+.blejProduktin button a {
+  padding: 10px 20px;
+  background-color: #20525C;
+  color: white;
+  border-radius: 5px;
+}
+
+input[type='text'] {
+  padding: 5px 10px;
+  width: 45%;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px gray;
+  transition: box-shadow .2s ease;
+}
+
+input[type='text']:focus {
+  outline: none;
+  box-shadow: 0px 0px 2px gray;
+  transition: box-shadow .2s ease;
+}
+
+input[type='submit'] {
+  padding: 10px 30px;
+  align-self: flex-end;
+  border-radius: 5px;
+  margin-right: 6%;
+  border: 0;
+  background-color: rgb(33, 83, 94);
+  color: white;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 80%;
+}
+
+form>div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+@media (max-width:1024px){
+  .product {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(60px);
+  }
+
+  .llojiProduktit,
+  .blejProduktin {
+    margin-left: 15vw;
+  }
+
+  .productInfo:last-child h2 {
+    width: fit-content;
+    margin: 0 auto;
+
+  }
+
+
+  .blejProduktin span {
+    font-size: 20px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Headeri */
+
+  header #headerText h1 {
+    font-size: 28px;
+  }
+
+  header #headerText {
+    margin-left: 5vw;
+  }
+
+  header #headerText p {
+    width: 100%;
+  }
+
+  /* navi */
+
+  nav {
+    height: 70px;
+    transition: .3s ease;
+    overflow: hidden;
+  }
+
+  nav ul {
+    display: none !important;
+  }
+
+  nav.active {
+    height: 350px;
+    z-index: 10;
+    background-color: black;
+    transition: .3s ease;
+  }
+
+  nav.active ul {
+    display: block !important;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  nav.active ul li {
+    font-size: 30px;
+  }
+
+  nav button {
+    position: absolute;
+    display: block !important;
+    top: 10px;
+    right: 10px;
+  }
+
+  nav span {
+    display: none;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(60px);
+  }
+
+  .llojiProduktit,
+  .blejProduktin {
+    margin-left: 15vw;
+  }
+
+  .productInfo:last-child h2 {
+    width: fit-content;
+    margin: auto;
+  }
+
+
+  .blejProduktin span {
+    font-size: 20px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+}
