@@ -1,0 +1,1 @@
+The e-commerce platform comprises two modules: one for users and the other for administrators, facilitating product buying where users can add items to their carts. Implemented using HTML, CSS, JS, Bootstrap, Vue.js for the user interface, and PHP, MySQL for managing user and product data.
