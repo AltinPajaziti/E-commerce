@@ -37,4 +37,4 @@ The **Admin Module** offers powerful management tools, ensuring the platform ope
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/username/ECommerceWebApp.git
+   git clone https://github.com/AltinPajaziti/E-commerce.git
